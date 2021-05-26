@@ -1,0 +1,230 @@
+:root {
+  --title-text-color: #212121;
+  --white-color: #ffffff;
+  --main-text-color: #757575;
+  --accent-color: #2196f3;
+  --main-font-family: 'Roboto', sans-serif;
+  --main-font-style: normal;
+  --accent-font-family: 'Raleway', sans-serif;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --color-button-list-btn: #f5f4fa;
+  --dark-background-color: #188ce8;
+  --background-color-fon: #2f303a;
+  --light-color-fon: #f5f4fa;
+  --main-logo-color: #000000;
+}
+
+/* -------------- СТИЛИЗАЦИЯ ДЛЯ ВСЕХ---------------------------------------- */
+
+body {
+  font-family: var(--main-font-family);
+  font-style: var(--main-font-style);
+  color: var(--main-text-color);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+/* -------------- СТИЛИЗАЦИЯ ЛОГОТИП---------------------------------------- */
+
+.logo,
+.logo-footer {
+  font-family: var(--accent-font-family);
+  font-weight: bold;
+  line-height: 1.192;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+}
+.web {
+  color: var(--accent-color);
+}
+
+.logo {
+  color: var(--main-logo-color);
+}
+.logo-footer {
+  color: var(--white-color);
+}
+
+.studio-footer {
+  color: var(--white-color);
+}
+
+/* -------------- СТИЛИЗАЦИЯ навигации---------------------------------------- */
+.nav-list {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+}
+
+.nav-list-link a:hover,
+.nav-list-link a:focus,
+.contacts-list-item a:hover,
+.contacts-list-item a:focus,
+.current-page {
+  color: var(--accent-color);
+}
+
+.contacts-list-item {
+  font-weight: 500;
+}
+
+/* -------------- СТИЛИЗАЦИЯ html---------------------------------------- */
+.hero-section,
+.footer-section {
+  background: var(--background-color-fon);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.team-section {
+  background: var(--light-color-fon);
+}
+
+.hero-title {
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.modal-button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background: var(--dark-background-color);
+}
+
+.title,
+.advantage-list-title {
+  color: var(--title-text-color);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+}
+
+.advantage-list-title {
+  font-size: 14px;
+  line-height: 1.142;
+  text-transform: uppercase;
+}
+.advantage-list-description {
+  font-size: 14px;
+  line-height: 1.714x;
+  letter-spacing: 0.03em;
+}
+
+.team-list-item-name,
+.team-list-item-position {
+  font-size: 16px;
+  line-height: 1.188;
+  /* text-align: center;
+  letter-spacing: 0.03em; */
+}
+
+.team-list-item-name {
+  color: var(--title-text-color);
+  font-weight: 500;
+}
+.address-list-item {
+  font-style: normal;
+  color: var(--white-color);
+}
+
+.address-list-link {
+  opacity: 0.6;
+}
+
+/* -------------- СТИЛИЗАЦИЯ portfolio---------------------------------------- */
+
+.button-list-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6325;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background: none;
+}
+
+.btn-main {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+.button-list-btn:hover,
+.button-list-btn:focus,
+.button-list-btn:active {
+  color: var(--white-color);
+  background: var(--dark-background-color);
+}
+
+.projects-list-item-name {
+  color: var(--title-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.projects-list-item-type {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+}
+
+.projects-list-item-description {
+  font-size: 18px;
+  line-height: 1.556;
+  letter-spacing: 0.03em;
+}
+
+/* -------------- СТИЛИЗАЦИЯ address list---------------------------------------- */
+
+.address-list-item a:hover,
+.address-list-item a:focus {
+  color: var(--accent-color);
+}
+
+.address {
+  color: var(--white-color);
+}
