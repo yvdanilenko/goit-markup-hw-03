@@ -29,6 +29,19 @@ body {
 
 .list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* -------------- СТИЛИЗАЦИЯ ЛОГОТИП---------------------------------------- */
@@ -41,28 +54,71 @@ body {
   font-size: 26px;
   letter-spacing: 0.03em;
 }
+
+.logo {
+  margin-right: 93px;
+  color: var(--main-logo-color);
+}
 .web {
   color: var(--accent-color);
 }
 
-.logo {
-  color: var(--main-logo-color);
-}
 .logo-footer {
+  display: block;
+  color: var(--white-color);
+  margin-bottom: 20px;
+  margin-left: 35px;
+}
+
+.footer-section .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.address-list-item {
+  display: block;
+  font-style: normal;
   color: var(--white-color);
 }
 
-.studio-footer {
-  color: var(--white-color);
+.address-list-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
-/* -------------- СТИЛИЗАЦИЯ навигации---------------------------------------- */
+/* -------------- СТИЛИЗАЦИЯ header--------------------------------------- */
+
+.header-page .container {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+
 .nav-list {
+  display: flex;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
+  padding-left: 0;
+}
+
+.nav-list-link:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+
+  padding-left: 0px;
+}
+
+.contacts-list-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-list-link a:hover,
@@ -75,6 +131,18 @@ body {
 
 .contacts-list-item {
   font-weight: 500;
+}
+
+.contacts-list-item:first-child {
+  /* margin-left: 331px; */
+}
+
+/* container */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* -------------- СТИЛИЗАЦИЯ html---------------------------------------- */
@@ -90,9 +158,10 @@ body {
   height: 1px;
   margin: -1px;
 }
-
-.team-section {
-  background: var(--light-color-fon);
+.hero-section .container {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -100,12 +169,14 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
+  vertical-align: inherit;
 }
 
 .modal-button {
+  display: inline-block;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -118,11 +189,32 @@ body {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 32px;
 }
 
 .modal-button:hover,
 .modal-button:focus {
   background: var(--dark-background-color);
+}
+.advantage-section .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantage-list {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.advantage-list-item {
+  width: 270px;
+}
+
+.advantage-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .title,
@@ -130,23 +222,64 @@ body {
   color: var(--title-text-color);
   font-weight: bold;
   letter-spacing: 0.03em;
+  margin-top: 0;
 }
 
 .title {
   font-size: 36px;
   line-height: 1.167;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .advantage-list-title {
   font-size: 14px;
   line-height: 1.142;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .advantage-list-description {
+  color: var(--main-text-color);
   font-size: 14px;
   line-height: 1.714x;
   letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.services-section .container {
+  padding-bottom: 94px;
+}
+
+.services-list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.services-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-section {
+  background: var(--light-color-fon);
+}
+
+.team-section .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-list-item-name,
@@ -160,10 +293,17 @@ body {
 .team-list-item-name {
   color: var(--title-text-color);
   font-weight: 500;
+  margin-bottom: 10px;
 }
-.address-list-item {
-  font-style: normal;
-  color: var(--white-color);
+
+.team-list-item-position {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.team-list-item-name,
+.team-list-item-position {
+  text-align: center;
 }
 
 .address-list-link {
@@ -171,6 +311,17 @@ body {
 }
 
 /* -------------- СТИЛИЗАЦИЯ portfolio---------------------------------------- */
+.portfolio-section .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.button-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .button-list-btn {
   font-weight: 500;
@@ -184,6 +335,11 @@ body {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background: none;
+  margin-bottom: 50px;
+}
+
+.button-list-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .btn-main {
@@ -198,11 +354,30 @@ body {
   background: var(--dark-background-color);
 }
 
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.projects-list-item {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.projects-list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
 .projects-list-item-name {
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+
+.projects-list-item-link {
+  display: block;
+  width: 370px;
 }
 
 .projects-list-item-type {
