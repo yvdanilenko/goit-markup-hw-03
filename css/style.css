@@ -173,6 +173,9 @@ p {
   text-transform: uppercase;
   margin-bottom: 30px;
   vertical-align: inherit;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-button {
@@ -293,6 +296,7 @@ p {
 .team-list-item-name {
   color: var(--title-text-color);
   font-weight: 500;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
