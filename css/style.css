@@ -16,6 +16,14 @@
 
 /* -------------- СТИЛИЗАЦИЯ ДЛЯ ВСЕХ---------------------------------------- */
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--main-font-family);
   font-style: var(--main-font-style);
@@ -67,43 +75,34 @@ p {
   display: block;
   color: var(--white-color);
   margin-bottom: 20px;
-  margin-left: 35px;
 }
 
-.footer-section .container {
+.footer-section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.address-list-item {
-  display: block;
-  font-style: normal;
-  color: var(--white-color);
-}
-
-.address-list-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 /* -------------- СТИЛИЗАЦИЯ header--------------------------------------- */
+
+.header-page {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ececec;
+}
 
 .header-page .container {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  height: 80px;
-  border-bottom: 1px solid #ececec;
 }
 
 .nav-list {
   display: flex;
+  padding-left: 0;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
-  padding-left: 0;
 }
 
 .nav-list-link:not(:last-child) {
@@ -133,10 +132,6 @@ p {
   font-weight: 500;
 }
 
-.contacts-list-item:first-child {
-  /* margin-left: 331px; */
-}
-
 /* container */
 .container {
   width: 1200px;
@@ -158,10 +153,13 @@ p {
   height: 1px;
   margin: -1px;
 }
-.hero-section .container {
-  text-align: center;
+
+.hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
+}
+.hero-section .container {
+  text-align: center;
 }
 
 .hero-title {
@@ -199,7 +197,8 @@ p {
 .modal-button:focus {
   background: var(--dark-background-color);
 }
-.advantage-section .container {
+
+.advantage-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -244,13 +243,13 @@ p {
 .advantage-list-description {
   color: var(--main-text-color);
   font-size: 14px;
-  line-height: 1.714x;
+  line-height: 1.714;
   letter-spacing: 0.03em;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.services-section .container {
+.services-section {
   padding-bottom: 94px;
 }
 
@@ -265,13 +264,12 @@ p {
   margin-right: 30px;
 }
 
-.team-section {
-  background: var(--light-color-fon);
-}
+/*------------- TEAM SECTION---------------------- */
 
-.team-section .container {
+.team-section {
   padding-top: 94px;
   padding-bottom: 94px;
+  background: var(--light-color-fon);
 }
 
 .team-list {
@@ -279,6 +277,15 @@ p {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+.team-list-item {
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-item:not(:last-child) {
@@ -289,33 +296,27 @@ p {
 .team-list-item-position {
   font-size: 16px;
   line-height: 1.188;
-  /* text-align: center;
-  letter-spacing: 0.03em; */
 }
 
 .team-list-item-name {
   color: var(--title-text-color);
   font-weight: 500;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.team-list-item-position {
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 .team-list-item-name,
 .team-list-item-position {
+  /* ;text-align: center */
+}
+
+.team-list-item-data {
+  width: 270px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
-.address-list-link {
-  opacity: 0.6;
-}
-
 /* -------------- СТИЛИЗАЦИЯ portfolio---------------------------------------- */
-.portfolio-section .container {
+.portfolio-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -324,7 +325,7 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 .button-list-btn {
@@ -339,7 +340,7 @@ p {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background: none;
-  margin-bottom: 50px;
+  padding: 6px 22px;
 }
 
 .button-list-item:not(:last-child) {
@@ -372,6 +373,14 @@ p {
   margin-right: 30px;
 }
 
+.projects-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.projects-list-item-data {
+  padding: 20px 24px;
+}
+
 .projects-list-item-name {
   color: var(--title-text-color);
   font-size: 18px;
@@ -399,11 +408,28 @@ p {
 
 /* -------------- СТИЛИЗАЦИЯ address list---------------------------------------- */
 
+.address {
+  color: var(--white-color);
+}
+
+.address-list {
+  padding-left: 0;
+}
+.address-list-item {
+  display: block;
+  font-style: normal;
+  color: var(--white-color);
+}
+
+.address-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .address-list-item a:hover,
 .address-list-item a:focus {
   color: var(--accent-color);
 }
 
-.address {
-  color: var(--white-color);
+.address-list-link {
+  opacity: 0.6;
 }
