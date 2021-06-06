@@ -12,6 +12,7 @@
   --background-color-fon: #2f303a;
   --light-color-fon: #f5f4fa;
   --main-logo-color: #000000;
+  --card-border-color: #eeeeee;
 }
 
 /* -------------- СТИЛИЗАЦИЯ ДЛЯ ВСЕХ---------------------------------------- */
@@ -307,11 +308,6 @@ a.link-header {
   font-weight: 500;
 }
 
-.team-list-item-name,
-.team-list-item-position {
-  /* ;text-align: center */
-}
-
 .team-list-item-data {
   width: 270px;
   padding-top: 30px;
@@ -385,6 +381,9 @@ a.link-header {
 
 .projects-list-item-data {
   padding: 20px 24px;
+  border-bottom: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
 }
 
 .projects-list-item-name {
